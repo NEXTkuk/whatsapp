@@ -84,7 +84,7 @@ input:focus {
     outline-offset: 3px;
 }
 
-#btn:hover {
+.action-button:hover {
     outline: 2px solid #27AE60;
     outline-offset: 3px;
 }
@@ -99,6 +99,8 @@ input:focus {
     cursor: pointer;
     padding: 10px 5px;
     margin: 30px 5px;
+
+    -webkit-appearance: none
 }
 
 .footer {
