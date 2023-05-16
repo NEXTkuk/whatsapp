@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WA Project</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <div class="card">
-            <h1 class="title">WhatsApp</h1>
-            <h2 class="subtitle">Начать чат</h2>
-            <input id="phone" type="tel" placeholder="+7(999)999-99-99">
-            <input type="button" id="btn" class="action-button" value="OK" required>
-            <a href="https://github.com/NEXTkuk" class="footer">By Buynov</a>
-        </div>
+      <div class="card">
+        <h1 class="title">WhatsApp</h1>
+        <h2 class="subtitle">Start chat</h2>
+        <input id="phone" type="tel" placeholder="+7(999)999-99-99" />
+        <input type="button" id="btn" class="action-button" value="OK" required />
+        <a href="https://github.com/NEXTkuk" class="footer">By Buynov</a>
+      </div>
     </div>
 
     <script src="https://unpkg.com/imask"></script>
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            tel = 0
-            var phoneMask = IMask(document.getElementById('phone'), {
-                mask: '+{0}(000)000-00-00'
-            }).on('complete', function() {
-                tel = phoneMask.unmaskedValue
-            });
-
-            btn.onclick = function(){
-                if (tel != 0) {
-                    document.location = 'https://api.whatsapp.com/send?phone=' + tel;
-                }
-		};
-
+      document.addEventListener('DOMContentLoaded', function () {
+        tel = 0;
+        var phoneMask = IMask(document.getElementById('phone'), {
+          mask: '+{0}(000)000-00-00',
+        }).on('complete', function () {
+          tel = phoneMask.unmaskedValue;
         });
+
+        btn.onclick = function () {
+          if (tel != 0) {
+            document.location = 'https://api.whatsapp.com/send?phone=' + tel;
+          }
+        };
+      });
     </script>
-</body>
+  </body>
 </html>
